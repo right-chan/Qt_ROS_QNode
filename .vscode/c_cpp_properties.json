@@ -1,0 +1,31 @@
+{
+  "configurations": [
+    {
+      "browse": {
+        "databaseFilename": "",
+        "limitSymbolsToIncludedHeaders": true
+      },
+      "includePath": [
+        "/opt/ros/noetic/include/**",
+        "/home/chan/catkin_ws/devel/include/**",
+        "/home/chan/catkin_ws/src/aruco_sub_pkg/include/**",
+        "/home/chan/catkin_ws/src/bridge_test/include/**",
+        "/home/chan/catkin_ws/src/codetest_pkg/include/**",
+        "/home/chan/catkin_ws/src/aruco/fiducial_slam/include/**",
+        "/home/chan/catkin_ws/src/myahrs_driver/include/**",
+        "/home/chan/catkin_ws/src/qt_test/include/**",
+        "/home/chan/catkin_ws/src/ros_cheating/include/**",
+        "/home/chan/catkin_ws/src/ros_tutorials_service/include/**",
+        "/home/chan/catkin_ws/src/yolov5_ROS/ros_yolo/include/**",
+        "/home/chan/catkin_ws/src/rosserial/rosserial_server/include/**",
+        "/home/chan/catkin_ws/src/rosserial/rosserial_test/include/**",
+        "/home/chan/catkin_ws/src/test_python/include/**",
+        "/home/chan/catkin_ws/src/crashlab_ros/tutorial_package/include/**",
+        "/home/chan/catkin_ws/src/vision_msgs/include/**",
+        "/usr/include/**"
+      ],
+      "name": "ROS"
+    }
+  ],
+  "version": 4
+}
