@@ -1,0 +1,3 @@
+<launch>
+    <node pkg="qt_test" type="qnode_test" name="mainwindow_qt"/>    
+</launch>
