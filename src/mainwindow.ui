@@ -6,21 +6,33 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1568</width>
-    <height>801</height>
+    <width>1920</width>
+    <height>1080</height>
    </rect>
   </property>
+  <property name="tabletTracking">
+   <bool>false</bool>
+  </property>
+  <property name="contextMenuPolicy">
+   <enum>Qt::NoContextMenu</enum>
+  </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>CrashLab</string>
+  </property>
+  <property name="autoFillBackground">
+   <bool>true</bool>
   </property>
   <widget class="QWidget" name="centralWidget">
+   <property name="autoFillBackground">
+    <bool>true</bool>
+   </property>
    <widget class="QWidget" name="gridLayoutWidget">
     <property name="geometry">
      <rect>
       <x>0</x>
       <y>0</y>
-      <width>421</width>
-      <height>331</height>
+      <width>511</width>
+      <height>421</height>
      </rect>
     </property>
     <layout class="QFormLayout" name="formLayout">
@@ -46,13 +58,26 @@
      </item>
     </layout>
    </widget>
+   <widget class="QLabel" name="imglabel3">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>660</y>
+      <width>311</width>
+      <height>221</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
    <widget class="QLabel" name="imglabel1">
     <property name="geometry">
      <rect>
-      <x>10</x>
-      <y>340</y>
-      <width>481</width>
-      <height>421</height>
+      <x>50</x>
+      <y>560</y>
+      <width>480</width>
+      <height>270</height>
      </rect>
     </property>
     <property name="text">
@@ -62,29 +87,34 @@
    <widget class="QLabel" name="imglabel2">
     <property name="geometry">
      <rect>
-      <x>570</x>
-      <y>80</y>
-      <width>411</width>
-      <height>411</height>
+      <x>350</x>
+      <y>50</y>
+      <width>981</width>
+      <height>741</height>
      </rect>
     </property>
     <property name="text">
      <string/>
     </property>
    </widget>
-   <widget class="QLabel" name="imglabel3">
+   <widget class="QPushButton" name="exitbutton">
     <property name="geometry">
      <rect>
-      <x>860</x>
-      <y>340</y>
-      <width>681</width>
-      <height>411</height>
+      <x>1818</x>
+      <y>0</y>
+      <width>101</width>
+      <height>25</height>
      </rect>
     </property>
     <property name="text">
-     <string/>
+     <string>PushButton</string>
     </property>
    </widget>
+   <zorder>gridLayoutWidget</zorder>
+   <zorder>imglabel3</zorder>
+   <zorder>exitbutton</zorder>
+   <zorder>imglabel1</zorder>
+   <zorder>imglabel2</zorder>
   </widget>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
