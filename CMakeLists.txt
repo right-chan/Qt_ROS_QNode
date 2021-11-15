@@ -10,7 +10,8 @@ set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTORCC ON)
 set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
-
+SET(QT_USE_QTMULTIMEDIA TRUE)
+SET(QT_USE_QTMULTIMEDIAWIDGETS TRUE)
 ## Find catkin macros and libraries
 ## if COMPONENTS list like find_package(catkin REQUIRED COMPONENTS xyz)
 ## is used, also find other catkin packages
@@ -18,7 +19,13 @@ find_package(catkin REQUIRED COMPONENTS
   roscpp
   std_msgs
 )
-find_package(Qt5 COMPONENTS Widgets REQUIRED)
+find_package(Qt5 COMPONENTS REQUIRED 
+  Widgets
+  Multimedia
+  MultimediaWidgets)
+# FIND_PACKAGE( Qt5Multimedia REQUIRED )
+# find_package(Qt5 COMPONENTS Multimedia REQUIRED)
+# FIND_PACKAGE( Qt5MultimediaWidgets REQUIRED )
 
 add_service_files(
   FILES
@@ -145,5 +152,6 @@ add_executable(qnode_test
     src/qnode.h
   )
 add_dependencies(qnode_test ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
-target_link_libraries(qnode_test PRIVATE Qt5::Widgets
-  ${catkin_LIBRARIES} ${OpenCV_LIBRARIES})
+target_link_libraries(qnode_test PRIVATE Qt5::Widgets Qt5::Multimedia Qt5::MultimediaWidgets
+  ${catkin_LIBRARIES} ${OpenCV_LIBRARIES}
+)

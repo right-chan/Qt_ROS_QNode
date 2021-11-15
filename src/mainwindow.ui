@@ -6,58 +6,83 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>518</width>
-    <height>423</height>
+    <width>1568</width>
+    <height>801</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralWidget">
-   <widget class="QTextEdit" name="pubText">
+   <widget class="QWidget" name="gridLayoutWidget">
     <property name="geometry">
      <rect>
-      <x>20</x>
-      <y>10</y>
-      <width>311</width>
-      <height>70</height>
+      <x>0</x>
+      <y>0</y>
+      <width>421</width>
+      <height>331</height>
      </rect>
     </property>
+    <layout class="QFormLayout" name="formLayout">
+     <item row="0" column="0">
+      <widget class="QTextEdit" name="pubText"/>
+     </item>
+     <item row="0" column="1">
+      <widget class="QPushButton" name="publishButton">
+       <property name="text">
+        <string>Publish</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0">
+      <widget class="QLabel" name="label">
+       <property name="text">
+        <string>Subscribed Message</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="0">
+      <widget class="QTextBrowser" name="subText"/>
+     </item>
+    </layout>
    </widget>
-   <widget class="QPushButton" name="publishButton">
+   <widget class="QLabel" name="imglabel1">
     <property name="geometry">
      <rect>
-      <x>350</x>
-      <y>10</y>
-      <width>151</width>
-      <height>71</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Publish</string>
-    </property>
-   </widget>
-   <widget class="QTextBrowser" name="subText">
-    <property name="geometry">
-     <rect>
-      <x>20</x>
-      <y>150</y>
+      <x>10</x>
+      <y>340</y>
       <width>481</width>
-      <height>192</height>
-     </rect>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label">
-    <property name="geometry">
-     <rect>
-      <x>20</x>
-      <y>130</y>
-      <width>151</width>
-      <height>17</height>
+      <height>421</height>
      </rect>
     </property>
     <property name="text">
-     <string>Subscribed Message</string>
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="imglabel2">
+    <property name="geometry">
+     <rect>
+      <x>570</x>
+      <y>80</y>
+      <width>411</width>
+      <height>411</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="imglabel3">
+    <property name="geometry">
+     <rect>
+      <x>860</x>
+      <y>340</y>
+      <width>681</width>
+      <height>411</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
     </property>
    </widget>
   </widget>
