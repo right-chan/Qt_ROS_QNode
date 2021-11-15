@@ -21,8 +21,9 @@ MainWindow::MainWindow(int argc, char** argv, QWidget *parent) :
     ui->imglabel2->setMovie(movie);
     movie->start();
 //  mp4
-    QMediaPlayer * player = new QMediaPlayer;
-    QVideoWidget * vw = new QVideoWidget;
+    QMediaPlayer * player = new QMediaPlayer(this);
+    QVideoWidget * vw = new QVideoWidget(this->ui->imglabel3);
+    // ui->imglabel3->setMovie(player);
     player->setVideoOutput(vw);
     player->setMedia(QUrl::fromLocalFile("/home/chan/catkin_ws/src/qt_test/src/strawberry moon.mp4"));
 
