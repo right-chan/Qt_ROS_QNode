@@ -23,7 +23,6 @@ bool QNode::init() {
     ros::start();
     ros::NodeHandle node;
     subs = node.subscribe("/chatter", 5, &QNode::topicCallback, this);
-    pub = node.advertise<std_msgs::String>("/chatter", 5);
     start();
     std::cout << "Successfully initialized node." << std::endl;
     return true;

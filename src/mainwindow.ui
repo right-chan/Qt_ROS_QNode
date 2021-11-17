@@ -26,95 +26,19 @@
    <property name="autoFillBackground">
     <bool>true</bool>
    </property>
-   <widget class="QWidget" name="gridLayoutWidget">
+   <widget class="QLabel" name="eyeLabel">
     <property name="geometry">
      <rect>
       <x>0</x>
       <y>0</y>
-      <width>511</width>
-      <height>421</height>
-     </rect>
-    </property>
-    <layout class="QFormLayout" name="formLayout">
-     <item row="0" column="0">
-      <widget class="QTextEdit" name="pubText"/>
-     </item>
-     <item row="0" column="1">
-      <widget class="QPushButton" name="publishButton">
-       <property name="text">
-        <string>Publish</string>
-       </property>
-      </widget>
-     </item>
-     <item row="1" column="0">
-      <widget class="QLabel" name="label">
-       <property name="text">
-        <string>Subscribed Message</string>
-       </property>
-      </widget>
-     </item>
-     <item row="2" column="0">
-      <widget class="QTextBrowser" name="subText"/>
-     </item>
-    </layout>
-   </widget>
-   <widget class="QLabel" name="imglabel3">
-    <property name="geometry">
-     <rect>
-      <x>20</x>
-      <y>660</y>
-      <width>311</width>
-      <height>221</height>
+      <width>1920</width>
+      <height>1080</height>
      </rect>
     </property>
     <property name="text">
      <string/>
     </property>
    </widget>
-   <widget class="QLabel" name="imglabel1">
-    <property name="geometry">
-     <rect>
-      <x>50</x>
-      <y>560</y>
-      <width>480</width>
-      <height>270</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-   </widget>
-   <widget class="QLabel" name="imglabel2">
-    <property name="geometry">
-     <rect>
-      <x>350</x>
-      <y>50</y>
-      <width>981</width>
-      <height>741</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="exitbutton">
-    <property name="geometry">
-     <rect>
-      <x>1818</x>
-      <y>0</y>
-      <width>101</width>
-      <height>25</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>PushButton</string>
-    </property>
-   </widget>
-   <zorder>gridLayoutWidget</zorder>
-   <zorder>imglabel3</zorder>
-   <zorder>exitbutton</zorder>
-   <zorder>imglabel1</zorder>
-   <zorder>imglabel2</zorder>
   </widget>
  </widget>
  <layoutdefault spacing="6" margin="11"/>

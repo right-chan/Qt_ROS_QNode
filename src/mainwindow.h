@@ -31,13 +31,14 @@ private:
     QVideoWidget * vw;
     QMediaPlayer * player;   
     QLabel * label;
+    QLabel * eye;
+    QMovie * eyemovie;
     QMovie *movie;
+    QMovie *movie2;
+    QPixmap *pix;
 
 public slots:
     void updateSubBox();
-
-private slots:
-    void on_publishButton_clicked();
 };
 
 #endif // MAINWINDOW_H

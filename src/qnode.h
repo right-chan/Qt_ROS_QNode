@@ -17,14 +17,12 @@ public:
     virtual ~QNode();
     bool init();
     void run();
-    ros::Publisher pub;
 
     // callback
     void topicCallback(const std_msgs::String::ConstPtr& msg);
 
     // Variables:
     std::string sub_message = "";
-    std::string pub_message = "";
 
     // Signals
 Q_SIGNALS:
@@ -35,8 +33,6 @@ private:
     int init_argc;
     char** init_argv;
     ros::Subscriber subs;
-
-
 
 };
 

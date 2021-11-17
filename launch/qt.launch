@@ -1,3 +1,4 @@
 <launch>
-    <node pkg="qt_test" type="qnode_test" name="mainwindow_qt" output="screen"/>    
+    <node pkg="qt_test" type="qnode_test" name="mainwindow_qt" output="screen"/>
+    <node pkg="pubstring" type="pubstring" name="pubstring"/>   
 </launch>
