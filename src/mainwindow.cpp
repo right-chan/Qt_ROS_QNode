@@ -4,6 +4,7 @@
 
 #include <QMediaPlayer>
 #include <QVideoWidget>
+QRect set_geometry(0,0,1824,984);
 
 MainWindow::MainWindow(int argc, char** argv, QWidget *parent) :
     QMainWindow(parent), qnode(argc, argv),
@@ -12,6 +13,8 @@ MainWindow::MainWindow(int argc, char** argv, QWidget *parent) :
     qnode.init();
     this->setStyleSheet("background-color: black;");
     ui->setupUi(this);
+    QString path = "/home/ubuntu/catkin_ws/src/qt_test/src";
+    
 
     QCursor cursor(Qt::BlankCursor); // 커서숨기기
     QApplication::setOverrideCursor(cursor);
@@ -22,17 +25,17 @@ MainWindow::MainWindow(int argc, char** argv, QWidget *parent) :
 
     //// 디폴트 눈 깜빡이기
 
-    eyemovie = new QMovie("/home/chan/catkin_ws/src/qt_test/src/eye10.gif");
-    ui->eyeLabel->setGeometry(0,0,1920,1080);
+    eyemovie = new QMovie(path+"/eye10.gif");
+    ui->eyeLabel->setGeometry(set_geometry);
     ui->eyeLabel->setMovie(eyemovie);
     eyemovie->setScaledSize(ui->eyeLabel->size());
     eyemovie->start();
 /////////////////////////////////////////////////////////
     
 
-    pix = new QPixmap("/home/chan/catkin_ws/src/qt_test/src/dice.png");
-    movie  = new QMovie("/home/chan/catkin_ws/src/qt_test/src/Spinner-1s-200px.gif");
-    movie2 = new QMovie("/home/chan/catkin_ws/src/qt_test/src/eye10.gif");
+    pix = new QPixmap(path+"/dice.png");
+    movie  = new QMovie(path+"/Spinner-1s-200px.gif");
+    movie2 = new QMovie(path+"/eye10.gif");
 
     
     // label->setMovie(movie);
@@ -42,7 +45,7 @@ MainWindow::MainWindow(int argc, char** argv, QWidget *parent) :
     // movie->start();
 
 
-    player->setMedia(QUrl::fromLocalFile("/home/chan/catkin_ws/src/qt_test/src/strawberry moon.mp4"));
+    player->setMedia(QUrl::fromLocalFile(path+"/strawberry moon.mp4"));
     player->setVideoOutput(vw);
     // 소리는 player에서만 나옴
     QObject::connect(&qnode, SIGNAL(msgSubscribed()), this, SLOT(updateSubBox()));
@@ -65,7 +68,7 @@ void MainWindow::updateSubBox(){
         case 1:
             label->close();
             vw->show();
-            vw->setGeometry(0,0,1920,1080);            
+            vw->setGeometry(set_geometry);            
             player->play();
         break;
 
@@ -77,7 +80,7 @@ void MainWindow::updateSubBox(){
 
         case 3:
             std::cout<<"case 3"<<std::endl;
-            vw->setGeometry(0,0,1920,1080);
+            vw->setGeometry(set_geometry);
             player->pause();
         break;
 
@@ -86,7 +89,7 @@ void MainWindow::updateSubBox(){
             vw->close();   
             player->stop();            
             std::cout<<"case 4"<<std::endl;
-            label->setGeometry(0,0,1920,1080);
+            label->setGeometry(set_geometry);
 
             label->setMovie(movie);
             movie->setScaledSize(label->size());
@@ -97,7 +100,7 @@ void MainWindow::updateSubBox(){
             label->show();
             vw->close();
             player->stop();
-            label->setGeometry(0,0,1920,1080);
+            label->setGeometry(set_geometry);
             std::cout<<"case 5"<<std::endl;
             
             label->setMovie(movie2);
@@ -110,7 +113,7 @@ void MainWindow::updateSubBox(){
             std::cout<<"case 6"<<std::endl;
             vw->close();
             player->stop();
-            label->setGeometry(0,0,1920,1080);
+            label->setGeometry(set_geometry);
             label->setPixmap(pix->scaled(label->width(),label->height(),Qt::KeepAspectRatio));
         break;
 

@@ -27,14 +27,6 @@ find_package(Qt5 COMPONENTS REQUIRED
 # find_package(Qt5 COMPONENTS Multimedia REQUIRED)
 # FIND_PACKAGE( Qt5MultimediaWidgets REQUIRED )
 
-add_service_files(
-  FILES
-  run.srv
-)
-generate_messages(
-  DEPENDENCIES
-  std_msgs
-)
 
 ## System dependencies are found with CMake's conventions
 # find_package(Boost REQUIRED COMPONENTS system)
